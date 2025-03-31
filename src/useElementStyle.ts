@@ -1,4 +1,4 @@
-import type { MaybeRef } from '@vueuse/core'
+import type { MaybeRef, Reactive } from 'vue'
 import { watch } from 'vue'
 import { reactiveStyle } from './reactiveStyle'
 import type { MotionTarget, PermissiveTarget, SVGPathProperties, StyleProperties } from './types'
@@ -11,7 +11,7 @@ import { isTransformOriginProp, isTransformProp } from './utils/transform'
  *
  * @param target
  */
-export function useElementStyle(target: MaybeRef<PermissiveTarget>, onInit?: (initData: Partial<StyleProperties>) => void) {
+export function useElementStyle(target: MaybeRef<PermissiveTarget>, onInit?: (initData: Partial<StyleProperties>) => void): { style: Reactive<StyleProperties> } {
   // Transform cache available before the element is mounted
   let _cache: StyleProperties | SVGPathProperties | undefined
   // Local target cache as we need to resolve the element from PermissiveTarget

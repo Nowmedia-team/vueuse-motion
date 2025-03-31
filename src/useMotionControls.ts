@@ -1,4 +1,4 @@
-import type { MaybeRef } from '@vueuse/core'
+import type { MaybeRef } from 'vue'
 import { isObject } from '@vueuse/core'
 import { ref, unref, watch } from 'vue'
 import type { MotionControls, MotionProperties, MotionTransitions, MotionVariants, Variant } from './types'
@@ -14,7 +14,7 @@ export function useMotionControls<T extends string, V extends MotionVariants<T>>
   { motionValues, push, stop }: MotionTransitions = useMotionTransitions(),
 ): MotionControls<T, V> {
   // Variants as ref
-  const _variants = unref(variants)
+  const _variants = unref(variants) as V
 
   // Is the current instance animated ref
   const isAnimating = ref(false)
