@@ -1,10 +1,9 @@
 {
-  "name": "@vueuse/motion",
+  "name": "@nowmedia-team/vueuse-motion",
   "type": "module",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "packageManager": "pnpm@10.6.2",
   "description": "🤹 Vue Composables putting your components in motion",
-  "author": "Yaël GUILLOUX <yael.guilloux@gmail.com>",
   "contributors": [
     {
       "name": "Yaël Guilloux (@Tahul)"
@@ -14,10 +13,10 @@
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/vueuse/motion#readme",
-  "repository": "https://github.com/vueuse/motion",
+  "homepage": "https://github.com/Nowmedia-team/vueuse-motion#readme",
+  "repository": "https://github.com/Nowmedia-team/vueuse-motion",
   "bugs": {
-    "url": "https://github.com/vueuse/motion/issues"
+    "url": "https://github.com/Nowmedia-team/vueuse-motion/issues"
   },
   "keywords": [
     "vue",
@@ -80,6 +79,7 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
+    "@nuxt/content": "^3.4.0",
     "@vueuse/core": "^13.0.0",
     "@vueuse/shared": "^13.0.0",
     "defu": "^6.1.4",
